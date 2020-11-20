@@ -5,32 +5,33 @@
 
 import SwiftUI
 
-struct DocumentPickerViewController {
+public struct FilePickerView {
     private let picker: UIViewController
-    init(picker: UIViewController) {
+    
+    public init(picker: UIViewController) {
         self.picker = picker
     }
 }
 
-extension DocumentPickerViewController: UIViewControllerRepresentable {
-    typealias UIViewControllerType = UIViewController
+extension FilePickerView: UIViewControllerRepresentable {
+    public typealias UIViewControllerType = UIViewController
 
-    func makeUIViewController(context: Context) -> UIViewControllerType {
+    public func makeUIViewController(context: Context) -> UIViewControllerType {
         return picker
     }
 
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+    public func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
 
-    func makeCoordinator() -> Coordinator {
+    public func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
 
-    class Coordinator: NSObject, ObservableObject {
-        var parent: DocumentPickerViewController
+    public class Coordinator: NSObject, ObservableObject {
+        var parent: FilePickerView
 
-        init(_ documentPickerController: DocumentPickerViewController) {
+        init(_ documentPickerController: FilePickerView) {
             parent = documentPickerController
         }
     }

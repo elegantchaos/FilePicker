@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 //  Created by Sam Deane on 20/11/2020.
@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "FilePicker",
     platforms: [
-        .macOS(.v10_13)
+        .iOS(.v13)
     ],
     products: [
         .library(
