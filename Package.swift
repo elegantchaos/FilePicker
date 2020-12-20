@@ -10,7 +10,7 @@ import PackageDescription
 let package = Package(
     name: "FilePicker",
     platforms: [
-        .iOS(.v13)
+        .macOS(.v10_13), .iOS(.v13)
     ],
     products: [
         .library(
@@ -18,7 +18,7 @@ let package = Package(
             targets: ["FilePicker"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/elegantchaos/XCTestExtensions", from: "1.1.2")
+        .package(url: "https://github.com/elegantchaos/XCTestExtensions.git", from: "1.1.2")
     ],
     targets: [
         .target(
